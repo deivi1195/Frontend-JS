@@ -1,0 +1,53 @@
+/*definir una paleta de colores*/
+/*seudoelementos que no esxiten en el html, son custom properties*/
+
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #00b341;
+    --secundario: #009747;
+    --gris: #757575;
+
+    /*si quisieras tener una fuente principal, se puede*/
+    --fuente-principal: 3.8rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+}
+/* con el codigo de arriba los rem seran 1rem = 10px*/
+/* no es recomendale escribir ID(#) por que los id no se puedes repetir los nombres de los id, deben ser unicos*/
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8"> <!--hace que la pagina web soporte caracteres especiales-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento Freelancer</title>
+    <title>Diseñador Freelancer</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--preload para que cargue mas rapido tu sitio web-->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <!--se usa h1,h2,h3... para darle jerarquia a los headers-->
-        <h1>Deivi Gonzalez Freelancer</h1>
+        <h1 class="titulo">Deivi Gonzalez <span>Freelancer</span></h1>
     </header>
 
     <!-- nav se usa para los enlaces que te llevan a otra parte de la pagina web-->
@@ -27,7 +36,7 @@
 
     <!--un section se usa cuando tienes un header y ese header tiene contenido y necesitas agruparlos-->
     <section>
-        <h2>Diseño y desarrollo web Freelancer</h2>
+        <h2 class="titulo">Diseño y desarrollo web <span>Freelancer</span></h2>
 
         <p>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
