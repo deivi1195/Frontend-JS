@@ -45,13 +45,26 @@ body {
 }
 
 .navegacion-principal {
-    padding: 1rem;
+    display: flex;
+    /*flex-direction: column;*/
+    /*align-items: center; ESTE ES EL JUSTIFY-CONTENT DEL COLUMN*/
+    justify-content: space-between;
 }
 
 .navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
 }
+
+/*hoover hace una accion cuando el mouse esta encima del elemento, en este caso cambia el color del fondo y tambien el color del texto*/
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
 
 
 

@@ -1,0 +1,55 @@
+ESTILOS PARA ESCRIBIR CODIGO CSS
+    BEM - Bloques, elementos, modificadores
+
+        tendrias un bloque con la clase principal
+            .card {} -> bloque
+            .card__titulo {} -> elementos
+            .card__imagen {} -> elementos
+            .card__boton {} -> elementos
+            .card__boton--activo {} -> modificador /*modifica al boton*/
+
+    UTILITY FIRST
+    terminas teniendo una propiedad y un valor
+
+        .text-center {}
+        .color-red-100 {}
+        .bg-blue-200 {}
+        .p-2 {}
+        .m-2 {}
+
+    MODULOS 
+
+        .card {}
+        .card h2 {}
+        .card img {}
+        .card a {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
