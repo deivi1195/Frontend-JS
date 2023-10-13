@@ -5,7 +5,7 @@
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #00b341;
-    --secundario: #009747;
+    --secundario: #0097A7;
     --gris: #757575;
 
     /*si quisieras tener una fuente principal, se puede*/
@@ -33,6 +33,20 @@ body {
     font-size: 2rem;
 }
 
+.contenedor {
+    width: 120rem;
+    /*puede recortar el margin de esta manera
+      margin: 0 auto*/
+    margin: 0 auto 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    
+}
 
 
 
