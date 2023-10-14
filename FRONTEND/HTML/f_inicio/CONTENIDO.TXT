@@ -24,13 +24,55 @@ ESTILOS PARA ESCRIBIR CODIGO CSS
         .card img {}
         .card a {}
 
+RENPOSIVE WEB DESING
 
+    adaptacion de los sitios web a los otros dispositivos celulares tablets relojes
 
+        MEDIA QUERIES
+            @media (min-with:768px){
 
+            }
+            @media (min-with:992px){
 
+            }
 
+        tamaños estandar
+            480px telefono
+            768px tablets
+            1140px laptop y principal
+            1400px
 
+        crear un prefijo para escribir automaticamente un media QUERIES
 
+        ctrl+shift+p
+            escribir prefix
+                escribir CSS
+                    abajo del todo dentro de las llaves escribir
+                        ->"Crea un media querie": {
+		                    "prefix": "mq",
+		                    "body": "@media (min-width: $1) {\n    $2\n}"
+	                    }
+
+        BOX MODEL
+            snnipet para que el tamaño del elemento no aumente o disminuya con el padding que le agregues
+
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+            box-sizing: border-box;
+            }
+            *, *:before, *:after {
+            box-sizing: inherit;
+            }
+
+POSICIONAMIENTO DE elementos
+
+    si quiero modificar la posicion de un elmento hijo, el elemento padre tiene que tener posicion relativa, para que el hijo pueda tener posicion absoluta
+        .hero {
+            position: relative;
+        }
+        .contenido-hero {
+            position: absolute;
+        }
 
 
 

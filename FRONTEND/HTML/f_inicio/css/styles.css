@@ -12,61 +12,140 @@
     --fuente-principal: 3.8rem;
 }
 
+/*Globales*/
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* hack para hacer que 1rem = 10px */
+    box-sizing: border-box; /* hack para el model box de irish */
+}
+*, *:before, *:after {  /* hack para el model box  */
+    box-sizing: inherit;
 }
 
 body {
-    font-size: 16px;
+    font-size: 16px; /* hack para hacer que 1rem = 10px */
     font-family: 'JetBrains Mono', monospace;
 }
-/* con el codigo de arriba los rem seran 1rem = 10px*/
+
 /* no es recomendale escribir ID(#) por que los id no se puedes repetir los nombres de los id, deben ser unicos*/
 
-.titulo {
-    text-align: center;
-    font-size: 3.8rem;
-    
-}
+/*-->BASE PARA LA TIPOGRAFIA<--*/
+h1 {                        /*|*/
+    font-size: 3.8rem;      /*|*/
+}                           /*|*/
+h2 {                        /*|*/
+    font-size: 2.8rem;      /*|*/
+}                           /*|*/
+h3 {                        /*|*/
+    font-size: 1.8rem;      /*|*/
+}                           /*|*/
+                            /*|*/
+h1, h2, h3 {                /*|*/
+    text-align: center;     /*|*/
+}                           /*|*/
+/*-->BASE PARA LA TIPOGRAFIA<--*/
 
 .titulo span {
-    font-size: 2rem;
+    font-size: 2rem; /* reduce el tamaño de la fuente que esta junto al h1 y h2 (freelancer) */
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem; /*el tamaño de lo que este dentro de la clase contenedor*/
     /*puede recortar el margin de esta manera
       margin: 0 auto*/
-    margin: 0 auto 0 auto;
+    margin: 0 auto 0 auto; /*hace que no tenga margen ni arriba ni abajo y que de izquierda a derecha tenga el mismo tamaño de margen*/
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem; /* separa el boton de algun elemento que tenga arriba */
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%; /* se le coloca el ancho largo para que en el telefono se vea largo */
+    text-align: center; /* alinear el texto despuer de alargar el boton */
+}
+@media (min-width: 480px) {
+    .boton {
+        width: auto; /* un media querie para que cuando la pantalla sea mas grande que 480px la anchura ya vuelva a la normalidad */
+    }
 }
 
 .nav-bg {
-    background-color: var(--secundario);
+    background-color: var(--secundario); /*hace que el fondo de la barra de navegacion sea del color secundario*/
 }
 
 .navegacion-principal {
-    display: flex;
+    display: flex; /*activa las funcionalidades de los atributos de flex*/ 
     /*flex-direction: column;*/
     /*align-items: center; ESTE ES EL JUSTIFY-CONTENT DEL COLUMN*/
-    justify-content: space-between;
+    flex-direction: column; /*los elementos esten uno encima de otro*/
+    justify-content: space-between; /*justifica el contenido de forma horizontal, y que tenga un espacio etre ellos*/
+}
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row; /*cuando el tama;o de la pantalla sea mayor a 480px los elementos esten de forma horizontal de izquierda a derecha*/ 
+    }
 }
 
 .navegacion-principal a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem;
+    display: block; /*al hacer display block hace que los elementos sean linea por linea una debajo de la otra*/
+    text-align: center; /*alinea el texto al centro*/
+    color: var(--blanco); /*colorea el texto en blanco*/
+    text-decoration: none; /*le quita el subrayado que trae por defecto el enlace*/ 
+    font-size: 2rem; /*tama;o del texto*/
+    font-weight: bold; /*coloca el texto en negritas*/
+    padding: 1rem; /*hace que del texto y el fondo tenga una separacion*/
 }
 
 /*hoover hace una accion cuando el mouse esta encima del elemento, en este caso cambia el color del fondo y tambien el color del texto*/
 .navegacion-principal a:hover {
-    background-color: var(--primario);
-    color: var(--oscuro);
+    background-color: var(--primario); /*colorea el fondo del enlace cuando le pasas el mouse por encima*/
+    color: var(--oscuro); /*colorea el texto del enlace cuando le pasas el mouse por encima*/
 }
 
+.hero {
+    background-image: url(../img/hero.jpg); /*agrega una imagen con CSS*/
+    background-repeat: no-repeat; /*para que no se repita la imagen*/
+    background-size: cover; /* para que cubra toda la imagen*/
+    height: 45rem;  /*tama;o de la imagen*/
+    position: relative; /*como es clase padre lleva relative, para que la clase hijo de contenido-hero pueda ser absoluta y mover el elemento sobre el*/
+}
 
+.contenido-hero {
+    position: absolute;
+    /*background-color: rgba(0,0,0,0.5); sintaxys anterior*/
+    /*aplicando una imagen en negro con transparencia*/
+    background-color: rgb(0 0 0 / 50% ); 
+    width: 100%; /*hace que la imagen cubran todo el elemento 100% anchura*/
+    height: 100%; /*hace que la imagen cubran todo el elemento 100% altura*/
+    
+    /*flex-direction: column
+    align-items = se movera horizontalmente
+    justify-content = se movera verticalmente
+    -
+    flex-direction: row
+    align-items = se movera verticalmente
+    justify-content = se movera horizontalmente*/
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
 
 
 
