@@ -16,6 +16,7 @@
 html {
     font-size: 62.5%; /* hack para hacer que 1rem = 10px */
     box-sizing: border-box; /* hack para el model box de irish */
+    scroll-snap-type: y mandatory; /* para hacer scroll entre secciones con efecto de deslizammiento, "Y" quiere decir que se desplazara de manera vertical por el eje del plano cartesiano */
 }
 *, *:before, *:after {  /* hack para el model box  */
     box-sizing: inherit;
@@ -182,15 +183,19 @@ h1, h2, h3 {
     align-items: flex-end;
 }
 
-/*-->SERVICIOS<--*/
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center; /* en el elemento que se detenga sera centrado */
+    scroll-snap-stop: always; /* siempre se va a detener en cada elemento */
+}
 
+/*-->SERVICIOS<--*/
 @media (min-width: 768px) {
     .servicios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1rem;
-
-
         /*
         grid-template-columns: repeat(3, 1fr);
         grid-template-columns: 1fr 1fr 1fr;
