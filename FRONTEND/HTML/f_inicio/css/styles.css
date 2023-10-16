@@ -4,7 +4,7 @@
 :root {
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #00b341;
+    --primario: #dfdf06;
     --secundario: #0097A7;
     --gris: #757575;
     --gris-claro: #DFE9F3;
@@ -38,7 +38,7 @@ body {
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
-    margin-top: 1rem; /* separa el boton de algun elemento que tenga arriba */
+    margin-top: 3rem; /* separa el boton de algun elemento que tenga arriba */
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -46,11 +46,16 @@ body {
     border-radius: .5rem;
     width: 90%; /* se le coloca el ancho largo para que en el telefono se vea largo */
     text-align: center; /* alinear el texto despuer de alargar el boton */
+    border: none;
 }
 @media (min-width: 480px) {
     .boton {
         width: auto; /* un media querie para que cuando la pantalla sea mas grande que 480px la anchura ya vuelva a la normalidad */
     }
+}
+
+.boton:hover { /* los inputs le quitan los acciones y estilos, asi como este caso pasarle el mouse por encima y que aparezca una manito */
+    cursor: pointer;
 }
 
 .sombra {
@@ -82,6 +87,23 @@ h1, h2, h3 {
 /*-->TITULOS<--*/
 .titulo span {
     font-size: 2rem; /* reduce el tamaño de la fuente que esta junto al h1 y h2 (freelancer) */
+}
+
+/*-->UTILIDADES<--*/
+.w-small-100 { /* esta clase aumenta la anchura del elemento al 100% (para los telefonos)*/
+    width: 100%;
+}
+@media (min-width: 768px) { /* con este media querie se quiere que en pantallas de pc el boton seas peque;o (se ajuste automaticamente) */
+    .w-small-100 {
+        width: auto; /* auto se ajusta al texto que tenga dentro el elemento */
+    }
+}
+.flex {
+    display: flex; /* activas el display flex en el div que se quiere usar sus funciones  */
+}
+.alinear-derecha {
+    justify-content: flex-end; /* ya teniendo display flex activado se justifica el o los elementos dentro de ese div, en este caso fue justify-content: flex-end , osea al final de espacio disponible en este caso a la derecha */
+    margin-top: 2rem;
 }
 
 /*-->NAVEGACION PRINCIPAL<--*/
@@ -159,6 +181,142 @@ h1, h2, h3 {
     display: flex;
     align-items: flex-end;
 }
+
+/*-->SERVICIOS<--*/
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+
+
+        /*
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 20rem 20rem 20rem; 
+        */
+        
+    
+        /* grid: rows / colums; EJ= grid: 200px 200px / 300px 300px; */
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: bold;
+}
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicios .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*-->CONTACTO<--*/
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /*utilizar el valor mas pequeño, muestra 60rem si la pantalla es mayor de 60rem, si la pantalla es menor de 60rem entonces muestra el tama;o de la pantalla (100%)*/
+    margin: 0 auto; /* puedes usar margin cuando en tu clase padre no tienes un display flex para usar justify-content */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr); /* dividir el espacio de los elementos, en este caso dos colunmas  */
+      /*grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;*/
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem; /* para separar las columnas */
+    }
+    .campo:nth-child(3) { /* selecciona la clase campo y a eso le aplica nthchild(hace que cada clase del mismo nombre en este caso campo sea como un array [1,2,3,4...]), en este caso como hay cuatro clases con el nombre campo cada una tendra un lugar en el array [1,2,3,4...], en este caso al eelegir 3 seleccionara la tercera clase (de arriba hacia abajo) y le aplicara el estilo que escribas. */
+        grid-column: 1 / 3;/* gridtemplate-columns define el area y grid-column modifica en donde quieres que este el elemento  */
+    }
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block; /* es para que queden una debajo de otra */
+
+}
+.campo textarea {
+    height: 20rem;
+}
+.input-text { /* se le crea la misma clase a cada input para darle forma aqui */
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    padding: 1.5rem;
+}
+/*
+.campo input[type="text"],
+.campo input[placeholder="Correo"] {  se puede seleccionar por el type o placeholder siendo el padre el input 
+    background-color: red;
+} */
+
+/*-->FOOTER<--*/
+.contenedor-footer p {
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

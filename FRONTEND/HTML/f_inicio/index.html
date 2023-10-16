@@ -64,95 +64,104 @@
     <main class="contenedor sombra">
         <h2>Mis Servicios</h2>
 
-        <!--Se le hace section a cada uno por que son elementos diferentes los cuales tienen un header mas un contenido propio de cada uno-->
+        <div class="servicios">
+            <!--Se le hace section a cada uno por que son elementos diferentes los cuales tienen un header mas un contenido propio de cada uno-->
+            <section class="servicio">
+                <h3>Diseño Web</h3>
+                
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                        <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
+            </section>
+
+            <section class="servicio">
+                <h3>Aplicaciones Moviles</h3>
+                
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+                        <path d="M11 4h2" />
+                        <path d="M12 17v.01" />
+                    </svg>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
+            </section>
+            
+            <section class="servicio">
+                <h3>E-Commerce</h3>
+                
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                        <path d="M3 10l18 0" />
+                        <path d="M7 15l.01 0" />
+                        <path d="M11 15l2 0" />
+                    </svg>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
+            </section>
+        </div> <!--.Servicios-->
+
+        <!--Contacto lleva section por que aparte del header h2 tiene su contenido que es el formulario-->
         <section>
-            <h3>Diseño Web</h3>
+            <h2>Contacto</h2>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
-                <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-            </svg>
+            <!--se utiliza para tener formularios que se rellenan con informacion-->
+            <form class="formulario">
+                <!--fieldset se usa para formar un grupo de campos, crea una linea que delimita el grupo de campos-->
+                <!--cuando agregas fieldset tiene que tener una etiqueta <legend></legend>-->
+                <fieldset>
+                    <!--legend se usa para describir el formulario (participar que tiene que hacer el usuario)-->
+                    <legend>Contactame llenando el formulario</legend>
+                    
+                    <div class="contenedor-campos">
+                        <div class="campo"> <!-- nthchild(1) -->
+                            <!--label se usa para el nombre del campo-->
+                            <label>Nombre</label>
+                            <!--input sera el campor donde el usuario escriba, tiene varias etiquetas como text,number,checkbox,radio,tel,email-->
+                            <!--placeholder es lo que se espera que se escriba en ese campo-->
+                            <input class="input-text" type="text" placeholder="Nombre">
+                        </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
+                        <div class="campo"> <!-- nthchild(2) -->
+                            <label>Telefono</label>
+                            <input class="input-text" type="number" placeholder="Telefono">
+                        </div>
+
+                        <div class="campo"> <!-- nthchild(3) -->
+                            <label>Correo</label>
+                            <input class="input-text" type="email" placeholder="Correo">
+                        </div>                        
+
+                        <div class="campo"> <!-- nthchild(4) -->
+                            <label>Mensaje</label>
+                            <textarea class="input-text"></textarea>
+                        </div>                        
+                    </div> <!-- .contenedor-campos -->
+                    
+                    <div class="alinear-derecha flex"> <!-- la clase alinear derecha me servira para alinear mi boton a la derecha o a donde yo quiera individualmente, para cuando deje de estar en pantallas de telefonos -->
+                        <input class="boton w-small-100" type="submit" value="Enviar"><!-- con la clase boton se le aplican todos los estiloq ue le habiamos aplicado al primer boton - con la clase w-100 se le aplica al boton una anchura(width) del 100% del espacio disponible -->
+                    </div> <!-- BOTON DE ENVIAR -->
+
+                </fieldset>
+            </form>
         </section>
-
-        <section>
-            <h3>Aplicaciones Moviles</h3>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
-                <path d="M11 4h2" />
-                <path d="M12 17v.01" />
-            </svg>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
-        </section>
-        
-        <section>
-            <h3>E-Commerce</h3>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
-                <path d="M3 10l18 0" />
-                <path d="M7 15l.01 0" />
-                <path d="M11 15l2 0" />
-            </svg>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa, quibusdam cum asperiores</p>
-        </section>
-        
-    </main>
-
-    <!--Contacto lleva section por que aparte del header h2 tiene su contenido que es el formulario-->
-    <section>
-        <h2>Contacto</h2>
-
-        <!--se utiliza para tener formularios que se rellenan con informacion-->
-        <form>
-            <!--fieldset se usa para formar un grupo de campos, crea una linea que delimita el grupo de campos-->
-            <!--cuando agregas fieldset tiene que tener una etiqueta <legend></legend>-->
-            <fieldset>
-                <!--legend se usa para describir el formulario (participar que tiene que hacer el usuario)-->
-                <legend>Contactame llenando todos los formularios</legend>
-                
-                <div>
-                    <!--label se usa para el nombre del campo-->
-                    <label>Nombre</label>
-                    <!--input sera el campor donde el usuario escriba, tiene varias etiquetas como text,number,checkbox,radio,tel,email-->
-                    <!--placeholder es lo que se espera que se escriba en ese campo-->
-                    <input type="text" placeholder="Nombre">
-                </div>
-                    </div>
-                    <label>Telefono</label>
-                    <input type="number" placeholder="Telefono">
-                <div>
-
-                <div>
-                    <label>Correo</label>
-                    <input type="email" placeholder="Correo">
-                </div>
-                
-
-                <div>
-                    <label>Mensaje</label>
-                    <textarea></textarea>
-                </div>
-                
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-                
-            </fieldset>
-        </form>
-    </section>
+    </main>    
     
     <!--Footer se usa para el pie de la pagina web-->
-    <footer>
+    <footer class="contenedor-footer">
         <p>Todos los derechos reservados. Deivi Gonzalez Freelancer.</p>
     </footer>
     
