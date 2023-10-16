@@ -16,12 +16,18 @@
 html {
     font-size: 62.5%; /* hack para hacer que 1rem = 10px */
     box-sizing: border-box; /* hack para el model box de irish */
-    scroll-snap-type: y mandatory; /* para hacer scroll entre secciones con efecto de deslizammiento, "Y" quiere decir que se desplazara de manera vertical por el eje del plano cartesiano */
+    scroll-snap-type: y mandatory; /* para hacer scroll entre secciones con efecto de deslizammiento, "Y" quiere decir que se desplazara de manera vertical por el eje del plano cartesiano, "MANDATORY= hace que cuando hagas el minimo esfuerzo de hacer scroll ya te lleve a la siguiente seccion.. PROXIMITY= HACE QUE TENGAS QUE HACER MAS ESFUERZO EN HACER SCROLL PARA MANDARDE A LA SIGUIENTE SECCION*/
 }
 *, *:before, *:after {  /* hack para el model box  */
     box-sizing: inherit;
 }
-
+/*-->SCROLL SNAP<--*/
+.servicios,
+.navegacion-principal,
+.formulario { /* se coloca aqui despues de definirlo arriba */
+    scroll-snap-align: center; /* en el elemento que se detenga sera centrado */
+    scroll-snap-stop: always; /* siempre se va a detener en cada elemento */
+}
 body {
     font-size: 16px; /* hack para hacer que 1rem = 10px */
     font-family: 'JetBrains Mono', monospace;
@@ -183,12 +189,7 @@ h1, h2, h3 {
     align-items: flex-end;
 }
 
-.servicios,
-.navegacion-principal,
-.formulario {
-    scroll-snap-align: center; /* en el elemento que se detenga sera centrado */
-    scroll-snap-stop: always; /* siempre se va a detener en cada elemento */
-}
+
 
 /*-->SERVICIOS<--*/
 @media (min-width: 768px) {
