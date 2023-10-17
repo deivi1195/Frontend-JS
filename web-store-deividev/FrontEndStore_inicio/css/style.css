@@ -1,0 +1,69 @@
+:root {
+    --primario: #9c27b0;
+    --primario-oscuro: #89119d;
+    --secundario: #ffce00;
+    --secundario-oscuro: rgb(233,287,2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuente-pricipal: 'JetBrains Mono', monospace;    
+}
+
+/* GLOBALES */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {  /* hack para el model box  */
+    box-sizing: inherit;
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuente-pricipal);
+    background-color: var(--primario);
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
